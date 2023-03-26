@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<style>
+    input[type=text],
+    button {
+        padding: 5px;
+        margin-left: 10px;
+
+    }
+</style>
+
+<head>
+    <title>Package Info</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        input[type=text], button {
+            padding: 5px;
+            margin-left: 10px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Gym Logo</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mx-auto py-2">
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="instructors.html">Instructors</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="gym-products.html">Buy Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact-us.html">Contact Us</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Jahir</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="profile.html">Profile</a>
+                        <a class="dropdown-item" href="membership.html">Membership Info</a>
+
+                        <a class="dropdown-item" href="php-functions/logout.html">Log Out</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-warning" href="sign-up.html">Sign Up</a>
+                </li>
+                <li class="nav-item ml-2">
+                    <a class="btn btn-primary" href="login.html">Log In</a>
+                </li>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-10 mx-auto p-3">
+
+                <h3 class="text-center my-5">Buy Exciting Packages For be a Member Of this Gym</h3>
+
+
+                <table class="table mt-3  table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Package Name</th>
+                            <th>Package Period</th>
+                            <th>Cost</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td scope="row">Basic Package</td>
+                            <td>2 Month</td>
+                            <td>5K</td>
+                            <td><a class="btn btn-success text-white" onclick="package('6')" role="button">Buy</a></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">STANDARD Package</td>
+                            <td>4 Month</td>
+                            <td>9K</td>
+                            <td><a class="btn btn-success text-white" onclick="package('6')" role="button">Buy</a></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Elite Package</td>
+                            <td>1 Year</td>
+                            <td>20K</td>
+                            <td><a class="btn btn-success text-white" onclick="package('6')" role="button">Buy</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Payment Transaction Numer</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <h2 class="lead text-center mt-2">Bkash:01834567892</h2>
+                    <p class="text-center mt-2 lead "></p>
+                </div>
+                <form action="packages.php" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="hidden" id="pk_id" name="id">
+                            <input type="text" class="form-control" name="txid" id="" required aria-describedby="helpId"
+                                placeholder="TxID">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="submit" type="submit" class="btn btn-primary">Buy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        function package(id) {
+            $('#myModal').modal('show');
+        }
+    </script>
+</body>
+
+</html>
